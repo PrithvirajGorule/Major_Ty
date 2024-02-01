@@ -167,6 +167,7 @@ const Signup = () => {
 
   // Inside the return statement of Signup component
 return (
+  <div className='bodysignin'>
   <div className="container">
     <div className="step-indicator">
       <div className={`step ${currentStep >= 1 ? 'filled' : ''}`}>
@@ -195,9 +196,10 @@ return (
       <div className="button-group">
         {currentStep > 1 && <button type="button" onClick={prevStep}>Previous</button>}
         {currentStep < 4 && <button type="button" onClick={nextStep}>Next</button>}
-        {currentStep === 4 && <button type="submit">Sign Up</button>}
+        {currentStep === 4 && <button type="submit" className='signupbtn'>Sign Up</button>}
       </div>
     </form>
+  </div>
   </div>
 );
 

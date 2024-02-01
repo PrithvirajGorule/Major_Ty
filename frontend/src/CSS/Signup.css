@@ -1,4 +1,4 @@
-body {
+ .bodysignin{
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
   margin: 0;
@@ -40,7 +40,7 @@ select {
   border-radius: 4px;
 }
 
-button {
+.button-group button{
   background-color: #0c3982;
   color: #fff;
   padding: 12px;
@@ -58,7 +58,7 @@ button {
 /* Add more styling as needed */
 
 
-button:hover {
+.button-group button:hover {
   background-color:rgb(20, 84, 143);
 }
 

@@ -29,6 +29,7 @@ const Signin = () => {
   };
 
   return (
+    <div className='bodysignin'>
     <div>
       
       <div className="container">
@@ -45,10 +46,12 @@ const Signin = () => {
           <input type="password" name="password" value={formData.password} onChange={handleChange} required />
         </label>
         <br />
-
-        <button type="submit">Sign In</button>
+        <div className='button-group'>
+        <button type="submit" className='signupbtn' >Sign In</button>
+        </div>
       </form>
       </div>
+    </div>
     </div>
   );
 };

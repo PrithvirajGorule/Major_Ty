@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
+import AdminPage from './pages/AdminPage';
 
 function App() {
   return (
@@ -18,6 +19,12 @@ function App() {
         <Route
             path="/signin"
             element={<Signin />}
+          />
+        
+
+        <Route
+            path="/admin"
+            element={<AdminPage />}
           />
         </Routes>
       </Router>
