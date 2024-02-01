@@ -50,12 +50,13 @@ app.post('/register', (req, res) => {
     address_state,
     address_zip,
     phone_number,
+    role // Add role parameter
   } = req.body;
 
   // Perform validation on user input
 
   const q =
-    'INSERT INTO users (`first_name`, `last_name`, `username`, `email`, `password_hash`, `date_of_birth`, `gender`, `address_street`, `address_city`, `address_state`, `address_zip`, `phone_number`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    'INSERT INTO users (`first_name`, `last_name`, `username`, `email`, `password_hash`, `date_of_birth`, `gender`, `address_street`, `address_city`, `address_state`, `address_zip`, `phone_number`, `role`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
   const values = [
     first_name,
     last_name,
@@ -69,6 +70,7 @@ app.post('/register', (req, res) => {
     address_state,
     address_zip,
     phone_number,
+    role // Add role parameter
   ];
 
   db.query(q, values, (err, data) => {
@@ -111,12 +113,13 @@ app.put('/register/:userId', (req, res) => {
     address_state,
     address_zip,
     phone_number,
+    role // Add role parameter
   } = req.body;
 
   // Perform validation on user input
 
   const q =
-    'UPDATE users SET `first_name`=?, `last_name`=?, `username`=?, `email`=?, `date_of_birth`=?, `gender`=?, `address_street`=?, `address_city`=?, `address_state`=?, `address_zip`=?, `phone_number`=? WHERE user_id=?';
+    'UPDATE users SET `first_name`=?, `last_name`=?, `username`=?, `email`=?, `date_of_birth`=?, `gender`=?, `address_street`=?, `address_city`=?, `address_state`=?, `address_zip`=?, `phone_number`=?, `role`=? WHERE user_id=?';
   const values = [
     first_name,
     last_name,
@@ -129,7 +132,8 @@ app.put('/register/:userId', (req, res) => {
     address_state,
     address_zip,
     phone_number,
-    userId,
+    role, // Add role parameter
+    userId
   ];
 
   db.query(q, values, (err, data) => {
@@ -142,6 +146,7 @@ app.put('/register/:userId', (req, res) => {
     return res.json({ success: true });
   });
 });
+
 
 app.listen(8800, () => {
   console.log('Connected to the backend!');
