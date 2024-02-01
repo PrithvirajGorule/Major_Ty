@@ -1,4 +1,3 @@
-/* Signup css */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -33,7 +32,6 @@ label {
   color: #555;
 }
 
-
 input,
 select {
   padding: 10px;
@@ -43,7 +41,7 @@ select {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #4d4dc9;
   color: #fff;
   padding: 12px;
   border: none;
@@ -51,8 +49,57 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+.button-group {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 0px;
 }
+
+/* Add more styling as needed */
+
+
+button:hover {
+  background-color:#4d4dc9;
+}
+
+/* Multi-step form styles */
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  position: relative;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #4d4dc9;/* Border for hollow circle */
+  border-radius: 50%;
+  color:#4d4dc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.filled {
+  border-radius: 30px;
+  background-color: #4d4dc9; /* Fill color for the circle */
+  color: #fff; /* Text color for the filled circle */
+  border: 2px solid  #4d4dc9; /* Border for the filled circle */
+}
+
+/* Add more styling as needed */
 
 /* Add more styling as needed */
