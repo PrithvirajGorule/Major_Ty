@@ -24,6 +24,28 @@ db.connect((err) => {
   }
 });
 
+app.post('/signin', (req, res) => {
+  const { username, password } = req.body;
+
+  const q = 'SELECT * FROM users WHERE username = ? AND password_hash = ?';
+  const values = [username, password]; // Note: You should hash the password before comparing in a real-world scenario
+
+  db.query(q, values, (err, data) => {
+    if (err) {
+      console.error('Error executing signin query:', err);
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+
+    if (data.length === 0) {
+      // Invalid credentials
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // Signin successful
+    return res.json({ success: true, user: data[0] });
+  });
+});
+
 app.get('/', (req, res) => {
   res.json('hello this is backend');
 });
