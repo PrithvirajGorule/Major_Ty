@@ -1,8 +1,11 @@
 import express from 'express';
 import mysql from 'mysql';
 import bodyParser from 'body-parser';
+import cors from 'cors'; // Import cors module
+
 
 const app = express();
+app.use(cors()); // Use cors middleware
 
 app.use(bodyParser.json());
 

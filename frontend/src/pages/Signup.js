@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './../CSS/Signup.css'
+import './../CSS/Signup.css';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -121,7 +121,7 @@ const Signup = () => {
         </label>
         <br />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" onClick={handleSubmit}>Sign Up</button>
       </form>
     </div>
   );
