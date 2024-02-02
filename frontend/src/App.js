@@ -5,9 +5,13 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import AdminPage from './pages/AdminPage';
 
+
 function App() {
   return (
+
+    
     <div className="App">
+     
       <Router>
         <Routes>
           {/* Pass isAuthenticated and setIsAuthenticated as props to Signup */}

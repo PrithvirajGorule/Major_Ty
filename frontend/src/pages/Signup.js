@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './../CSS/Signup.css';
 
+
 const Step1 = ({ formData, handleChange }) => (
   <>
     <label>
@@ -167,6 +168,8 @@ const Signup = () => {
 
   // Inside the return statement of Signup component
 return (
+  <div>
+  
   <div className='bodysignin'>
   <div className="container">
     <div className="step-indicator">
@@ -199,6 +202,7 @@ return (
         {currentStep === 4 && <button type="submit" className='signupbtn'>Sign Up</button>}
       </div>
     </form>
+  </div>
   </div>
   </div>
 );
